@@ -30,7 +30,7 @@ $(".js_subtitulo1").append("¡Bienvenid@ Ingresante!");
 
 var animaciones = "si"
 
-const URLJSON = "../datos/jugadores_guild.json"
+const URLJSON = "datos/jugadores_guild.json"
 
 var listanombres = [];
 var listaraza = [];
