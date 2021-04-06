@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="multimedia/imagenes/icono All Nighters.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Solicitud de Ingreso - All Nighters</title>
+</head>
+<body>
+    <div class="fixed-top">
+        <button class="fondopantalla  btn-fondo" type="button">Cambiar Fondo de Pantalla</button>
+    </div>
+
+    <div class="container-fluid">
+        <h1 class="titulo">All Nighters Guild</h1>
+    </div>
+    
+    <div class="alisub">
+        <h2 class="subtitulo js_subtitulo1"></h2>
+    </div>
+    
+
+    <h3 class="text-center mt-5 color1">Completa el siguiente formulario</h3>
+
+    <div class="container">
+        <form class="mt-5" id="js_formulario">
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="color1"><h5>Ingresa el nombre de tu personaje</h5></label>
+                <input type="text" class="form-control js_nombrepPJ" id="js_nombrepPJ" placeholder="Nombre">
+            </div>
+
+
+            <div class="form-group mt-5">
+                <label for="exampleFormControlSelect1" class="color1"><h5>Selecciona tu Raza:</h5></label>
+                <select class="form-control js_razaPJ">
+                    <option value=" "> </option>
+                    <option value="Humano">Humano</option>
+                    <option value="Enano">Enano</option>
+                    <option value="Elfo de la Noche">Elfo de la Noche</option>
+                    <option value="Gnomo">Gnomo</option>
+                    <option value="Draenei">Draenei</option>
+                    <option value="Huargen">Huargen</option>
+                    <option value="Pandaren">Pandaren</option>
+                    <option value="Elfo del Vacio">Elfo del Vacío</option>
+                    <option value="Draenei Templeluz">Draenei Templeluz</option>
+                    <option value="Enano Hierro Negro">Enano Hierro Negro</option>
+                    <option value="Kultirano">Kultirano</option>
+                    <option value="Mecagnomo">Mecagnomo</option>
+                </select>
+            </div>
+
+
+            <div class="form-group mt-5">
+                <label for="exampleFormControlSelect1" class="color1"><h5>Seleccion tu Clase:</h5></label>
+                <select class="form-control js_clasePJ">
+                    <option value=" "> </option>
+                    <option value="Guerrero">Guerrero</option>
+                    <option value="Cazador">Cazador</option>
+                    <option value="Mago">Mago</option>
+                    <option value="Picaro">Pícaro</option>
+                    <option value="Sacerdote">Sacerdote</option>
+                    <option value="Brujo">Brujo</option>
+                    <option value="Paladin">Paladín</option>
+                    <option value="Druida">Druida</option>
+                    <option value="Chaman">Chamán</option>
+                    <option value="Monje">Monje</option>
+                    <option value="Cazador de Demonios">Cazador de Demonios</option>
+                    <option value="Caballero de la Muerte">Caballero de la Muerte</option>
+                </select>
+            </div>
+
+            <div class="mt-5">
+                <h5 class="color1">Selecciona el Rol de tu personaje:</h5>
+                <div class="mt-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input js_rolPJ1" type="radio" name="inlineRadioOptions" id="js_rolPJ1" value="option1">
+                        <label class="form-check-label color1 fuenterol" for="js_rolPJ1">Daño</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input js_rolPJ2" type="radio" name="inlineRadioOptions" id="js_rolPJ2" value="option2">
+                        <label class="form-check-label color1 fuenterol" for="js_rolPJ2">Sanador</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input js_rolPJ3" type="radio" name="inlineRadioOptions" id="js_rolPJ3" value="option3">
+                        <label class="form-check-label color1 fuenterol" for="js_rolPJ3">Tanque</label>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="form-group mt-5">
+                <label for="exampleFormControlTextarea1" class="color1"><h5>¿Qué contenido te gusta realizar?</h5></label>
+                <textarea class="form-control js_contenidoPJ" id="js_contenidoPJ" rows="3" placeholder="Contenido Favorito"></textarea>
+            </div>
+
+
+            <div class="mt-4">
+                <button class="btn botonenviar btn-solicitud" type="button">Enviar Solicitud</button>
+                <button class="btn botonborrar ml-2" type="reset">Borrar Solicitud</button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="table-responsive">
+        <div class="alisub mt-5">
+            <h2 class="subtitulo2">Solicitudes de Ingreso Pendientes</h2>
+        </div>
+        <table class="table container mt-5 js_tabla" id="js_tabla">
+            <tr class="tablasuperior">
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Clase</th>
+                <th>Rol</th>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="alisub margen_top">
+        <button class="btn btn_miembros js_btn_miembros" type="button">CLICK PARA VER MIEMBROS ACTIVOS DE LA GUILD</button>
+    </div>
+    
+
+
+    <div class="table-responsive js_mienbros" id="js_miembros_activos">
+        <div class="alisub mt-5">
+            <h2 class="subtitulo">Miembros Activos de la Guild</h2>
+        </div>
+        <table class="table container mt-5 js_tabla_miembros" id="js_tabla_miembros">
+            <tr class="tablasuperior">
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Clase</th>
+                <th>Rol</th>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <h3 class="subdps">Calculadora de DPS (Daño Por Segundo)</h3>
+
+    <div class="container mt-5 alisub">
+        <form id="formulariodDPS">
+            <div class="form-group mt-4">
+                <div class="alisub">
+                    <label for="js_nivel"><h5 class="txtcal">Ingresa el Nivel de tu personaje:</h5></label>
+                </div>
+                <div class="alisub">
+                    <input type="number" class="form-control tamtxtform js_nivel">
+                </div>
+            </div>
+
+            <div class="form-group mt-4">
+                <div class="alisub">
+                    <label for="js_ilvl" ><h5 class="txtcal">Ingresa el Item Level de tu personaje:</h5></label>
+                </div>
+                <div class="alisub">
+                    <input type="number" class="form-control tamtxtform js_ilvl">
+                </div>
+            </div>
+            
+            
+            <div class="mt-4 alisub">
+                <button class="btn botonenviar btn-enviar" type="button">Generar DPS</button>
+                <button class="btn botonborrar ml-2" type="reset">Borrar Datos</button>
+            </div>
+
+
+            <div class="form-group mt-4">
+                <div class="alisub" id="dpsap">
+                    <label for="js_resultadodps"><h5 class="txtcal">Tu DPS aproximado es de:</h5></label>
+                </div>
+                <div class="alisub">
+                    <p class="resultadodps" id="js_resultadodps"></p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+    <footer class="pie mt-5">
+        <p class="pie__titulo--fctbm">Página creada por fans y para fans</p>
+
+        <div class="pie__iconos pie__iconos--ffc">
+            <a class="pie__iconos--footerseparacion" href="https://discord.com/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                    <path d="M6.552 6.712c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888.008-.488-.36-.888-.816-.888zm2.92 0c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888s-.36-.888-.816-.888z"/>
+                    <path d="M13.36 0H2.64C1.736 0 1 .736 1 1.648v10.816c0 .912.736 1.648 1.64 1.648h9.072l-.424-1.48 1.024.952.968.896L15 16V1.648C15 .736 14.264 0 13.36 0zm-3.088 10.448s-.288-.344-.528-.648c1.048-.296 1.448-.952 1.448-.952-.328.216-.64.368-.92.472-.4.168-.784.28-1.16.344a5.604 5.604 0 0 1-2.072-.008 6.716 6.716 0 0 1-1.176-.344 4.688 4.688 0 0 1-.584-.272c-.024-.016-.048-.024-.072-.04-.016-.008-.024-.016-.032-.024-.144-.08-.224-.136-.224-.136s.384.64 1.4.944c-.24.304-.536.664-.536.664-1.768-.056-2.44-1.216-2.44-1.216 0-2.576 1.152-4.664 1.152-4.664 1.152-.864 2.248-.84 2.248-.84l.08.096c-1.44.416-2.104 1.048-2.104 1.048s.176-.096.472-.232c.856-.376 1.536-.48 1.816-.504.048-.008.088-.016.136-.016a6.521 6.521 0 0 1 4.024.752s-.632-.6-1.992-1.016l.112-.128s1.096-.024 2.248.84c0 0 1.152 2.088 1.152 4.664 0 0-.68 1.16-2.448 1.216z"/>
+                </svg>
+                <p>Discord</p>
+            </a>
+            <a class="pie__iconos--footerseparacion" href="https://web.whatsapp.com/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+                    <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                </svg>
+                <p>Whatsapp</p>
+            </a>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="js/myscript.js"></script>
+</body>
+</html>

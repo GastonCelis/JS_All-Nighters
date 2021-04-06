@@ -1,0 +1,264 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../multimedia/imagenes/Taberna1.jpg);
+    background-attachment: fixed;
+}
+
+.color1 {
+    color: orange;
+}
+
+.botonenviar {
+    color: black;
+    background-color: orange;
+    transition: all, 1s;
+}
+
+.botonenviar:hover {
+    transform: scale(1.1);
+    transition: all, 1s;
+}
+
+.botonborrar {
+    color: orange;
+    background-color: black;
+    transition: all, 1s;
+}
+
+.botonborrar:hover {
+    transform: scale(1.1);
+    transition: all, 1s;
+    color: orange;
+}
+
+.fuenterol {
+    font-size: 20px;
+}
+
+.titulo{
+    color: orange;
+    background-color: black;
+    border: solid orange;
+    border-radius: 5px;
+    margin-top: 1em;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: bounceInDown 1s;
+}
+
+.subtitulo {
+    margin-top: 2em;
+    color: black;
+    background-color: orange;
+    border: solid black;
+    border-radius: 5px;
+    width: 800px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: backInUp 1s;
+}
+
+.subtitulo2 {
+    margin-top: 2em;
+    color: black;
+    background-color: white;
+    border: solid black;
+    border-radius: 5px;
+    width: 800px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: backInUp 1s;
+}
+
+.alisub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.subdps {
+    text-align: center;
+    color: orange;
+    margin-top: 6em;
+}
+
+.tamtxtform {
+    width: 100px;
+}
+
+.txtcal {
+    color: orange;
+    text-shadow: 0px -2px 0px black, 0px 2px 0px black, 0px -3px 0px black, 0px 3px 0px black, -2px 0px 0px black, 2px 0px 0px black, -3px 0px 0px black, 3px 0px 0px black;
+}
+
+.parrafop {
+    color: white;
+    background-color: black;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 1em;
+}
+
+.tablasuperior {
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.tablainterna {
+    color: black;
+    background-color: white;
+    text-align: center;
+}
+
+.itemtabla{
+    text-transform: capitalize;
+}
+
+.resultadodps {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.fondopantalla{
+    background-color: orange;
+    color: black;
+    border: solid 1px;
+    border-radius: 10px;
+    box-shadow: white 0px 5px 5px;
+    margin-left: 3em;
+    margin-top: 1em;
+    transition: all, 1s;
+}
+
+.fondopantalla:hover {
+    transform: scale(1.1);
+    transition: all, 1s;
+    background-color: green;
+}
+
+.img-fondo2{
+    background-image: url(../multimedia/imagenes/Taberna2.jpg);
+}
+
+.img-fondo1{
+    background-image: url(../multimedia/imagenes/Taberna1.jpg);
+}
+
+.fondopantalla2{
+    background-color: orange;
+    color: black;
+    border: solid 1px;
+    border-radius: 10px;
+    box-shadow: white 0px 5px 5px;
+    margin-top: 1em;
+    margin-left: 20em;
+    transition: all, 1s;
+}
+
+.fondopantalla2:hover {
+    transform: scale(1.1);
+    transition: all, 1s;
+    background-color: green;
+}
+
+.btm_eliminar{
+    border-radius: 20%;
+    background-color: red;
+    color: white;
+}
+
+.btn_miembros{
+    background-color: greenyellow;
+    color: red;
+    font-size: 25px;
+    transition: all, 1s;
+}
+
+.btn_miembros:hover {
+    transform: scale(1.2);
+    transition: all, 1s;
+    background-color: yellow;
+    color: red;
+}
+
+.margen_top {
+    margin-top: 8em;
+}
+
+.nombre_miembro{
+    color: orange;
+    text-decoration: none;
+    display: block;
+}
+
+.nombre_miembro:hover{
+    color: orange;
+    text-decoration: none;
+}
+
+.tabla_nombre{
+    background-color: black;
+    text-transform: capitalize;
+    transition: all, 1s;
+}
+
+.tabla_nombre:hover{
+    transform: scale(1.1);
+    transition: all, 1s;
+    background-color: gray;
+}
+
+.tabla_datos{
+    background-color: orange;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.pie{
+    background-image: radial-gradient(circle, #000000, #151515, #222222, #303030, #3f3f3f);
+    background-size: cover;
+}
+
+.pie__titulo--fctbm {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-top: 10px; 
+}
+
+.pie__iconos--ffc {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.pie__iconos--footerseparacion {
+    margin: 10px;
+    transition: all 0.5s; 
+}
+
+.pie__iconos--footerseparacion:hover{
+    transform: rotate(360deg);
+    transition: all 0.5s; 
+}
+
+a {
+    text-decoration: none;
+    color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; 
+}
