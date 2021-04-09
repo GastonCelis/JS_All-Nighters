@@ -63,7 +63,7 @@ $(".btn-solicitud").click(
                 title: '<h1 class="tituloAlerta">Datos Incorrectos</h1>',
                 html: '<p class="textoAlerta">Completa todos los campos del formulario</p>',
                 icon: 'error',
-                background: 'center/cover no-repeat url(../multimedia/imagenes/humano2.jpg)',
+                background: 'center/cover no-repeat url(multimedia/imagenes/humano2.jpg)',
                 allowOutsideClick: false,
                 confirmButtonColor: 'red'
             })
@@ -114,7 +114,7 @@ $(".btn-enviar").click(function(){
             title: '<h1 class="tituloAlerta2">Ingresó un nivel o un item level incorrectos</h1>',
             html: '<p class="textoAlerta2">El nivel es de 1 - 60, El Ilvl de 1 - 236</p>',
             icon: 'error',
-            background: 'center/cover no-repeat url(../multimedia/imagenes/humano1.jpg)',
+            background: 'center/cover no-repeat url(multimedia/imagenes/humano1.jpg)',
             allowOutsideClick: false,
             confirmButtonColor: 'red'
         })
