@@ -254,6 +254,8 @@ body {
 .pie__iconos--footerseparacion:hover{
     transform: rotate(360deg);
     transition: all 0.5s; 
+    color: orange;
+    text-decoration: none;
 }
 
 a {
