@@ -63,9 +63,9 @@ $(".btn-solicitud").click(
                 title: 'Datos Incompletos',
                 text: 'Completa todos los campos del formulario',
                 icon: 'error',
+                background: '#fff center/cover no-repeat url(../multimedia/imagenes/humano2.jpg)',
                 allowOutsideClick: false,
                 customClass: {
-                    popup: 'imgAlerta',
                     title: 'tituloAlerta',
                     content: 'textoAlerta',
                 },
@@ -118,9 +118,9 @@ $(".btn-enviar").click(function(){
             title: 'Ingresó un nivel o un item level incorrectos',
             text: 'El nivel es de 1 - 60, El Ilvl de 1 - 236',
             icon: 'error',
+            background: '#fff center/cover no-repeat url(../multimedia/imagenes/humano1.jpg)',
             allowOutsideClick: false,
             customClass: {
-                popup: 'imgAlerta2',
                 title: 'tituloAlerta2',
                 content: 'textoAlerta2',
             },

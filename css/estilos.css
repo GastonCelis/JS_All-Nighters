@@ -263,20 +263,6 @@ a {
     text-align: center; 
 }
 
-.imgAlerta{
-    background-image: url(../multimedia/imagenes/humano2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.imgAlerta2{
-    background-image: url(../multimedia/imagenes/humano1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
 .tituloAlerta{
     color: white;
 }
