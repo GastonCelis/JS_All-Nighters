@@ -262,3 +262,36 @@ a {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center; 
 }
+
+.imgAlerta{
+    background-image: url(../multimedia/imagenes/humano2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.imgAlerta2{
+    background-image: url(../multimedia/imagenes/humano1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.tituloAlerta{
+    color: white;
+}
+
+.textoAlerta{
+    color: white;
+}
+
+.tituloAlerta2{
+    background-color: rgba(228, 229, 232, 0.5);
+    color: black
+}
+
+.textoAlerta2{
+    background-color: rgba(228, 229, 232, 0.5);
+    color: black;
+}
+

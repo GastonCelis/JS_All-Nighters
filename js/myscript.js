@@ -59,7 +59,18 @@ $(".btn-solicitud").click(
         var contenido = $(".js_contenidoPJ").val();
 
         if(nombre == " " || raza == " " || clase == " " || rol == " "){
-            alert("Datos Incompletos")
+            Swal.fire({
+                title: 'Datos Incompletos',
+                text: 'Completa todos los campos del formulario',
+                icon: 'error',
+                allowOutsideClick: false,
+                customClass: {
+                    popup: 'imgAlerta',
+                    title: 'tituloAlerta',
+                    content: 'textoAlerta',
+                },
+                confirmButtonColor: 'red'
+            })
         }
     
         else {
@@ -98,9 +109,23 @@ $(".btn-solicitud").click(
 $(".btn-enviar").click(function(){
     var nivel = parseInt($(".js_nivel").val());
     var ilvl = parseInt($(".js_ilvl").val());
+    if(isNaN(nivel) || isNaN(ilvl)){
+        var Nnan = true
+    }
     var calculo = calculo_dps(nivel, ilvl);
-    if( (nivel < 1 || nivel > 60) || (ilvl < 1 || ilvl > 236)){
-        alert("Ingresó un nivel o un item level incorrectos")
+    if( (nivel < 1 || nivel > 60 || Nnan == true) || (ilvl < 1 || ilvl > 236 || Nnan == true)){
+        Swal.fire({
+            title: 'Ingresó un nivel o un item level incorrectos',
+            text: 'El nivel es de 1 - 60, El Ilvl de 1 - 236',
+            icon: 'error',
+            allowOutsideClick: false,
+            customClass: {
+                popup: 'imgAlerta2',
+                title: 'tituloAlerta2',
+                content: 'textoAlerta2',
+            },
+            confirmButtonColor: 'red'
+        })
     }
 
     else{
