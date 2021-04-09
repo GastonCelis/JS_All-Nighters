@@ -60,15 +60,11 @@ $(".btn-solicitud").click(
 
         if(nombre == " " || raza == " " || clase == " " || rol == " "){
             Swal.fire({
-                title: 'Datos Incompletos',
-                text: 'Completa todos los campos del formulario',
+                title: '<h1 class="tituloAlerta">Datos Incorrectos</h1>',
+                html: '<p class="textoAlerta">Completa todos los campos del formulario</p>',
                 icon: 'error',
                 background: 'center/cover no-repeat url(../multimedia/imagenes/humano2.jpg)',
                 allowOutsideClick: false,
-                /*customClass: {
-                    title: 'tituloAlerta',
-                    content: 'textoAlerta',
-                },*/
                 confirmButtonColor: 'red'
             })
         }
@@ -115,15 +111,11 @@ $(".btn-enviar").click(function(){
     var calculo = calculo_dps(nivel, ilvl);
     if( (nivel < 1 || nivel > 60 || Nnan == true) || (ilvl < 1 || ilvl > 236 || Nnan == true)){
         Swal.fire({
-            title: 'Ingresó un nivel o un item level incorrectos',
-            text: 'El nivel es de 1 - 60, El Ilvl de 1 - 236',
+            title: '<h1 class="tituloAlerta2">Ingresó un nivel o un item level incorrectos</h1>',
+            html: '<p class="textoAlerta2">El nivel es de 1 - 60, El Ilvl de 1 - 236</p>',
             icon: 'error',
             background: 'center/cover no-repeat url(../multimedia/imagenes/humano1.jpg)',
             allowOutsideClick: false,
-            /*customClass: {
-                title: 'tituloAlerta2',
-                content: 'textoAlerta2',
-            },*/
             confirmButtonColor: 'red'
         })
     }
