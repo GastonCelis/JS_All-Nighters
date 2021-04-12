@@ -178,6 +178,21 @@ $(".btn-fondo").click(function(){
         
     else if ($("body").hasClass("img-fondo2")){
         $("body").removeClass();
+        $("body").addClass("img-fondo3")
+    }
+
+    else if ($("body").hasClass("img-fondo3")){
+        $("body").removeClass();
+        $("body").addClass("img-fondo4")
+    }
+
+    else if ($("body").hasClass("img-fondo4")){
+        $("body").removeClass();
+        $("body").addClass("img-fondo5")
+    }
+
+    else if ($("body").hasClass("img-fondo5")){
+        $("body").removeClass();
         $("body").addClass("img-fondo1")
     }
     

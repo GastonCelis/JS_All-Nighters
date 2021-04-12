@@ -150,12 +150,24 @@ body {
     background-color: green;
 }
 
+.img-fondo1{
+    background-image: url(../multimedia/imagenes/Taberna1.jpg);
+}
+
 .img-fondo2{
     background-image: url(../multimedia/imagenes/Taberna2.jpg);
 }
 
-.img-fondo1{
-    background-image: url(../multimedia/imagenes/Taberna1.jpg);
+.img-fondo3{
+    background-image: url(../multimedia/imagenes/Taberna3.png);
+}
+
+.img-fondo4{
+    background-image: url(../multimedia/imagenes/Taberna4.jpg);
+}
+
+.img-fondo5{
+    background-image: url(../multimedia/imagenes/Taberna5.jpg);
 }
 
 .fondopantalla2{
