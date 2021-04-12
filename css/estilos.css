@@ -283,6 +283,12 @@ a {
     color: white;
 }
 
+.textnombre{
+    text-transform: capitalize;
+    font-size: 40px;
+    color: white;
+    background-color: red;
+}
 
 
 

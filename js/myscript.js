@@ -37,8 +37,7 @@ var listaraza = [];
 var listaclase = [];
 var listarol = [];
 var listacontenido = [];
-
-
+var nombresJson = [];
 var rol = " "
 $(".js_rolPJ1").click(function(){
     rol = "Daño"
@@ -51,12 +50,15 @@ $(".js_rolPJ3").click(function(){
 });
 
 
+
 $(".btn-solicitud").click(
     function(){
         var nombre = $(".js_nombrepPJ").val();
         var raza = $(".js_razaPJ").val();
         var clase = $(".js_clasePJ").val()
         var contenido = $(".js_contenidoPJ").val();
+        
+        
 
         if(nombre == " " || raza == " " || clase == " " || rol == " "){
             Swal.fire({
@@ -68,35 +70,74 @@ $(".btn-solicitud").click(
                 confirmButtonColor: 'red'
             })
         }
+
     
         else {
-            listanombres.push(nombre);
-            listaraza.push(raza);
-            listaclase.push(clase);
-            listarol.push(rol)
-            listacontenido.push(contenido);
-    
-            $("#js_tabla").append("<tr class=tablainterna><td class=itemtabla>" + nombre + "</td><td class=itemtabla>" + raza + "</td><td class=itemtabla>" + clase + "</td><td class=itemtabla>" + rol + "</td><td><button class='btm_eliminar js_btnEliminar' type=button>X</button></td></tr>")
-            
-
-            $(".js_btnEliminar").click(function (e) { 
-                e.preventDefault();
-                var fila = $(this).parent().parent()[0]
-                fila.remove()
-            });
-
-
-            for(i=0; i < listanombres.length; i++){
-                var jugadores = new Jugador(listanombres[i].toUpperCase(), listaraza[i].toUpperCase(),
-                listaclase[i].toUpperCase(), listarol[i].toUpperCase(), listacontenido[i].toUpperCase())
+            $.getJSON(URLJSON, function(respuesta){
+                var verificacionNOM = 0
+                for(dato123 of respuesta){
+                    if(dato123.nombre.toUpperCase() == nombre.toUpperCase()){
+                        verificacionNOM = verificacionNOM + 1
+                    }
                 }
-            
-            console.log(jugadores)
-            console.log(jugadores.setIngresa())
 
-            $("#js_formulario")[0].reset()
+                if(verificacionNOM == 0){
+                    let verNomTabla = listanombres.find(elemento => elemento == nombre)
+                    
+                    if(verNomTabla == nombre){
+                        Swal.fire({
+                            title: '<h1 class="tituloAlerta">Ya se envió la solicitud para:</h1>',
+                            html: '<p class="textoAlerta textnombre">'+ nombre +'</p>',
+                            icon: 'error',
+                            background: 'center/cover no-repeat url(multimedia/imagenes/humano2.jpg)',
+                            allowOutsideClick: false,
+                            confirmButtonColor: 'red'
+                        })
+                        $("#js_formulario")[0].reset()
+                    }
+
+                    else{
+                        listanombres.push(nombre);
+                        listaraza.push(raza);
+                        listaclase.push(clase);
+                        listarol.push(rol)
+                        listacontenido.push(contenido);
+
+                        $("#js_tabla").append('<tr class="tablainterna"><td class="itemtabla js_verNom">' + nombre + '</td><td class="itemtabla">' + raza + '</td><td class="itemtabla">' + clase + '</td><td class="itemtabla">' + rol + '</td><td><button class="btm_eliminar js_btnEliminar" type=button>X</button></td></tr>')
+                    
+                        $(".js_btnEliminar").click(function (e) { 
+                            e.preventDefault();
+                            var fila = $(this).parent().parent()[0]
+                            fila.remove()
+                        });
+                    
+                    
+                        for(i=0; i < listanombres.length; i++){
+                            var jugadores = new Jugador(listanombres[i].toUpperCase(), listaraza[i].toUpperCase(),
+                            listaclase[i].toUpperCase(), listarol[i].toUpperCase(), listacontenido[i].toUpperCase())
+                            }
+                                
+                        console.log(jugadores)
+                        console.log(jugadores.setIngresa())
+                    
+                        $("#js_formulario")[0].reset()
+                    }
+                }
+
+                else{
+                    Swal.fire({
+                        title: '<h1 class="tituloAlerta">El Jugador ' + nombre.toUpperCase() + '</h1>',
+                        html: '<p class="textoAlerta">Ya es un miembro activo en la guild</p>',
+                        icon: 'error',
+                        background: 'center/cover no-repeat url(multimedia/imagenes/humano2.jpg)',
+                        allowOutsideClick: false,
+                        confirmButtonColor: 'red'
+                    })
+                    $("#js_formulario")[0].reset()
+                }
+                
+            })
         }
-        
     }
 )
 
@@ -156,6 +197,7 @@ $(".js_btn_miembros").click(() =>{
                     var datosJugadores = respuesta;
                     for(const dato of datosJugadores){
                         $("#js_tabla_miembros").append(`<tr class='tablainterna'><td class='tabla_nombre'><a class='nombre_miembro' target='_blank' href=${dato.enlace}>${dato.nombre}</a></td><td class='tabla_datos'>${dato.raza}</td><td class='tabla_datos'>${dato.clase}</td><td class='tabla_datos'>${dato.rol}</td></tr>`)
+                        
                     }
                 }
             }
